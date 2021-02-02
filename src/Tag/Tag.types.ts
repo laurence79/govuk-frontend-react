@@ -1,5 +1,5 @@
 export type TagProps = {
   loading?: boolean;
   text: string;
-  colour?: 'RED' | 'GREEN' | 'GREY' | 'ORANGE'
+  colour?: 'RED' | 'GREEN' | 'GREY' | 'ORANGE';
 };

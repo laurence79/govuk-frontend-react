@@ -1,88 +1,88 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import { TagProps } from "./Tag.types";
-import { Tag } from "./Tag";
+import React from 'react';
+import { render } from '@testing-library/react';
+import { TagProps } from './Tag.types';
+import { Tag } from './Tag';
 
-describe("Tag", () => {
+describe('Tag', () => {
   let props: TagProps;
 
   beforeEach(() => {
     props = {
-      colour: "RED",
+      colour: 'RED',
       text: 'Text'
     };
   });
 
   const renderComponent = () => render(<Tag {...props} />);
 
-  it("should have primary className with default props", () => {
+  it('should have primary className with default props', () => {
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("govuk-tag");
+    expect(testComponent).toHaveClass('govuk-tag');
   });
 
-  it("should have red className with colour RED", () => {
-    props.colour = "RED";
+  it('should have red className with colour RED', () => {
+    props.colour = 'RED';
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("red-tag");
+    expect(testComponent).toHaveClass('red-tag');
   });
 
-  it("should have green className with colour GREEN", () => {
-    props.colour = "GREEN";
+  it('should have green className with colour GREEN', () => {
+    props.colour = 'GREEN';
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("green-tag");
+    expect(testComponent).toHaveClass('green-tag');
   });
 
-  it("should have grey className with colour GREY", () => {
-    props.colour = "GREY";
+  it('should have grey className with colour GREY', () => {
+    props.colour = 'GREY';
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("grey-tag");
+    expect(testComponent).toHaveClass('grey-tag');
   });
 
-  it("should have orange className with colour ORANGE", () => {
-    props.colour = "ORANGE";
+  it('should have orange className with colour ORANGE', () => {
+    props.colour = 'ORANGE';
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("orange-tag");
+    expect(testComponent).toHaveClass('orange-tag');
   });
 
-  it("should have glow-text className with loading true", () => {
+  it('should have glow-text className with loading true', () => {
     props.loading = true;
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveClass("glow-text");
+    expect(testComponent).toHaveClass('glow-text');
   });
 
-  it("should not have glow-text className with loading false", () => {
+  it('should not have glow-text className with loading false', () => {
     props.loading = false;
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).not.toHaveClass("glow-text");
+    expect(testComponent).not.toHaveClass('glow-text');
   });
 
-  it("should contain text", () => {
-    props.text = "Hello test";
+  it('should contain text', () => {
+    props.text = 'Hello test';
     const { getByTestId } = renderComponent();
 
-    const testComponent = getByTestId("tag");
+    const testComponent = getByTestId('tag');
 
-    expect(testComponent).toHaveTextContent("Hello test");
+    expect(testComponent).toHaveTextContent('Hello test');
   });
 });
