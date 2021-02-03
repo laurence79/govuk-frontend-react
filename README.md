@@ -21,7 +21,7 @@ npm i govuk-frontend react react-dom
 Make sure you import the styles somewhere global
 
 ```scss
-@import '~govuk-frontend-react-ts/index';
+@import '~govuk-frontend-react-ts/dist/index';
 ```
 
 Then import components like so
