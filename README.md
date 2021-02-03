@@ -95,3 +95,17 @@ which will install the local component library as a dependency in `test-app`. It
 ```
 
 Your components can then be imported and used in that project.
+
+## Contributing
+
+Contributions welcome, please submit a PR :)
+
+### Guidelines
+
+- Steer as close to the original govuk-frontend component as possible, but feel
+  free to design a more react-like interface.
+
+- Any components which involve routing should not directly reference a routing
+  library. This is so we can support both
+  [Create React App](https://create-react-app.dev) and
+  [next.js](https://nextjs.org)
