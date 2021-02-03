@@ -1,6 +1,6 @@
 {
-  "name": "react-component-library",
-  "version": "1.0.0",
+  "name": "govuk-frontend-react",
+  "version": "0.0.1",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -13,17 +13,16 @@
     "build:watch": "rollup -c -w",
     "lint": "./node_modules/.bin/eslint --cache 'src/**/*.{js,ts,jsx,tsx}'",
     "lint:watch": "./node_modules/.bin/esw --cache 'src/**/*.{js,ts,jsx,tsx}' --watch",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:smoke": "node-sass --importer=node_modules/node-sass-tilde-importer build/index.scss /dev/null",
+    "cypress:open": "TZ=UTC CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open",
+    "cypress:run": "TZ=UTC CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress run --browser chrome --headless",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component",
-    "prepublishOnly": "npm run build && npm run test:smoke"
+    "prepublishOnly": "npm run build && npm run cypress:run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/laurence79/govuk-frontend-react.git"
   },
   "keywords": [
     "React",
@@ -37,9 +36,9 @@
   "author": "Harvey Delaney",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HarveyD/react-component-library/issues"
+    "url": "https://github.com/laurence79/govuk-frontend-react/issues"
   },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/laurence79/govuk-frontend-react#readme",
   "peerDependencies": {
     "govuk-frontend": "^3.10.2",
     "react": ">=16.8.0",
@@ -47,20 +46,20 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@cypress/code-coverage": "^3.9.2",
+    "@cypress/react": "^4.16.4",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@storybook/addon-knobs": "^6.1.16",
     "@storybook/addons": "^6.1.16",
     "@storybook/react": "^6.1.12",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/react": "^11.2.3",
-    "@types/jest": "^24.0.24",
     "@types/react": "^16.9.12",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^10.0.0",
+    "cypress": "^6.4.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -72,7 +71,6 @@
     "eslint-watch": "^7.0.0",
     "govuk-frontend": "^3.10.2",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.3",
     "node-sass": "^5.0.0",
     "node-sass-tilde-importer": "^1.0.2",
     "prettier": "^2.2.1",
@@ -83,9 +81,10 @@
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.29.0",
+    "sass": "^1.32.6",
     "sass-loader": "^10.1.1",
     "scss-bundle": "^3.1.2",
-    "ts-jest": "^26.4.4",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "webpack": "^4.46.0"
   }
 }

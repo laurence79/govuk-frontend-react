@@ -1,8 +1,7 @@
 {
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "plugins": ["jsx-a11y", "@typescript-eslint", "prettier"],
   "extends": [
@@ -47,13 +46,14 @@
       }
     },
     {
-      "files": ["**/*.spec.ts", "**/*.spec.tsx", "**/cypress/**/*"],
+      "files": ["**/*.spec.*", "**/*.stories.*"],
       "rules": {
         "no-unused-expressions": "off",
         "spaced-comment": "off",
         "func-names": "off",
         "no-console": "off",
-        "@typescript-eslint/no-non-null-assertion": "off"
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     }
   ],

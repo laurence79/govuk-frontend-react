@@ -8,6 +8,12 @@ storybook-static/
 # caches
 .eslintcache
 
+# test output
+.nyc_output
+coverage
+cypress/screenshots
+cypress/videos
+
 # misc
 .DS_Store
 npm-debug.log*

@@ -1,0 +1,8 @@
+{
+  "testFiles": "**/*spec.{ts,tsx}",
+  "video": false,
+  "fixturesFolder": false,
+  "experimentalComponentTesting": true,
+  "componentFolder": "src",
+  "nodeVersion": "system"
+}

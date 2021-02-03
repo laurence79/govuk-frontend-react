@@ -7,7 +7,8 @@ import { classNameForTagColour } from './classNameForTagColour';
 export const Tag: React.FC<TagProps> = ({
   loading,
   text,
-  colour
+  colour,
+  ...rest
 }: TagProps) => (
   <strong
     data-testid="tag"
@@ -16,6 +17,7 @@ export const Tag: React.FC<TagProps> = ({
       loading && 'glow-text',
       classNameForTagColour(colour)
     )}
+    {...rest}
   >
     {text}
   </strong>
