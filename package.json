@@ -1,5 +1,5 @@
 {
-  "name": "govuk-frontend-react",
+  "name": "govuk-frontend-react-ts",
   "version": "0.0.1",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -22,23 +22,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurence79/govuk-frontend-react.git"
+    "url": "git+https://github.com/laurence79/govuk-frontend-react-ts.git"
   },
   "keywords": [
     "React",
-    "Component",
-    "Library",
-    "Rollup",
-    "Typescript",
-    "Sass",
-    "Storybook"
+    "govuk",
+    "Typescript"
   ],
   "author": "Laurence Hartgill",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/laurence79/govuk-frontend-react/issues"
+    "url": "https://github.com/laurence79/govuk-frontend-react-ts/issues"
   },
-  "homepage": "https://github.com/laurence79/govuk-frontend-react#readme",
+  "homepage": "https://github.com/laurence79/govuk-frontend-react-ts#readme",
   "peerDependencies": {
     "govuk-frontend": "^3.10.2",
     "react": ">=16.8.0",

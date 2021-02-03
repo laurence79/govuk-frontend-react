@@ -1,13 +1,13 @@
-# govuk-frontend-react
+# govuk-frontend-react-ts
 
-A thin React shim on top of [govuk-frontend](https://github.com/alphagov/govuk-frontend)
+A thin shim of React and Typescript on top of [govuk-frontend](https://github.com/alphagov/govuk-frontend).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
 ```sh
-npm i govuk-frontend-react
+npm i govuk-frontend-react-ts
 ```
 
 Also add the peer dependencies if not already installed
@@ -21,13 +21,13 @@ npm i govuk-frontend react react-dom
 Make sure you import the styles somewhere global
 
 ```scss
-@import '~govuk-frontend-react/index';
+@import '~govuk-frontend-react-ts/index';
 ```
 
 Then import components like so
 
 ```ts
-import { Tag } from 'govuk-frontend-react';
+import { Tag } from 'govuk-frontend-react-ts';
 ```
 
 ## Development
@@ -79,7 +79,7 @@ Don't forget to add the component to your `index.ts` exports if you want the lib
 Let's say you have another project (`test-app`) on your machine that you want to try installing the component library into without having to first publish the component library. In the `test-app` directory, you can run:
 
 ```
-npm i --save ../govuk-frontend-react
+npm i --save ../govuk-frontend-react-ts
 ```
 
 which will install the local component library as a dependency in `test-app`. It'll then appear as a dependency in `package.json` like:
@@ -88,7 +88,7 @@ which will install the local component library as a dependency in `test-app`. It
   ...
   "dependencies": {
     ...
-    "govuk-frontend-react": "file:../govuk-frontend-react",
+    "govuk-frontend-react-ts": "file:../govuk-frontend-react-ts",
     ...
   },
   ...
