@@ -2,5 +2,5 @@ module.exports = componentName => ({
   content: `.${componentName.toLowerCase()} {
 }
 `,
-  extension: `.scss`
+  filename: `${componentName}.scss`
 });

@@ -17,5 +17,8 @@
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.quoteStyle": "single",
   "taskExplorer.pathToMake": "make",
-  "cSpell.words": ["govuk"]
+  "cSpell.words": [
+    "behaviour",
+    "govuk"
+  ]
 }
