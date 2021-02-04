@@ -25,7 +25,10 @@ export default {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ useTsconfigDeclarationDir: true }),
+    typescript({
+      useTsconfigDeclarationDir: true,
+      tsconfig: 'tsconfig.release.json'
+    }),
     bundleScss({
       bundlerOptions: {
         project: path.resolve(__dirname, './cases/tilde-import'),

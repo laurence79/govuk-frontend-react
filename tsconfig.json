@@ -17,11 +17,5 @@
     "types": ["cypress", "@percy/cypress"]
   },
   "include": ["src/**/*"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "storybook-static",
-    "src/**/*.stories.tsx",
-    "src/**/*.spec.tsx"
-  ]
+  "exclude": ["node_modules", "dist", "storybook-static"]
 }
