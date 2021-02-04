@@ -49,7 +49,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   const commonAttributes: {
     id?: string;
-    attributes?: {};
+    attributes?: Record<string, unknown>;
     className?: string;
     'data-module': string;
     'data-testid': 'Button';
@@ -103,8 +103,8 @@ export const Button: React.FC<ButtonProps> = ({
     );
   } else if (element === 'button') {
     elem = (
-      // eslint-disable-next-line react/button-has-type
       <button
+        // eslint-disable-next-line react/button-has-type
         type={type || 'button'}
         value={value}
         {...buttonAttributes}
