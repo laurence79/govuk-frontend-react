@@ -64,13 +64,19 @@
       }
     },
     {
-      "files": ["**/*.spec.ts", "**/*.spec.tsx", "util/**/*.*"],
+      "files": [
+        "**/*.spec.ts",
+        "**/*.spec.tsx",
+        "**/*.stories.tsx",
+        "util/**/*.*"
+      ],
       "rules": {
         "no-unused-expressions": "off",
         "spaced-comment": "off",
         "func-names": "off",
         "no-console": "off",
-        "@typescript-eslint/no-non-null-assertion": "off"
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {

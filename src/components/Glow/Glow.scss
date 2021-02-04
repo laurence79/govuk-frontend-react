@@ -1,0 +1,45 @@
+@import '~govuk-frontend/govuk/helpers/colour';
+
+@mixin glow {
+  animation: glow 1.5s ease-in-out infinite;
+  background: #e8e9ed !important;
+  color: transparent !important;
+  cursor: progress;
+  display: inline-block;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.glow-checkbox,
+.glow-text,
+.glow-text a {
+  @include glow;
+}
+
+.glow-checkbox {
+  margin-right: 16px;
+  width: 12px;
+  height: 12px;
+}
+
+.glow {
+  a,
+  button,
+  input,
+  strong,
+  span {
+    @include glow;
+  }
+
+  button {
+    border-color: transparent;
+  }
+}

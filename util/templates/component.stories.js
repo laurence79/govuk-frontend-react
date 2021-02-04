@@ -3,7 +3,7 @@ module.exports = componentName => ({
 import { ${componentName} } from './${componentName}';
 
 export default {
-  title: '${componentName}'
+  title: 'components/${componentName}'
 };
 
 export const ${componentName}Story = () => <${componentName} foo="bar" />;
