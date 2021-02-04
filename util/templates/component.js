@@ -9,5 +9,5 @@ export const ${componentName}: React.FC<${componentName}Props> = ({ foo }) => (
   </div>
 );
 `,
-  extension: `.tsx`
+  filename: `${componentName}.tsx`
 });

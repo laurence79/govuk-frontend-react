@@ -20,7 +20,7 @@ jobs:
         run: npm run lint
 
       - name: Tests
-        run: npm run cypress:run
+        run: npm run cypress:ci
 
       - name: Build
         run: npm run build

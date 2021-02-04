@@ -1,0 +1,75 @@
+@import '~govuk-frontend/govuk/components/button/button';
+
+/* From https://github.com/alphagov/govuk_elements */
+.button {
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.526315em 0.789473em 0.263157em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003618;
+  -moz-box-shadow: 0 2px 0 #003618;
+  box-shadow: 0 2px 0 #003618;
+  font-size: 1.2em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  &:active {
+    top: 2px;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 2px 0 #003618;
+    -moz-box-shadow: 0 2px 0 #003618;
+    box-shadow: 0 2px 0 #003618;
+  }
+}
+
+.button-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.526315em 0.789473em 0.263157em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  font-size: 1.2em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c;
+  box-shadow: 0 1px 0 #0b0c0c;
+  border: #0b0c0c 1px solid;
+  &:active {
+    top: 2px;
+    -webkit-appearance: none;
+    -webkit-box-shadow: 0 2px 0 #dee0e2;
+    -moz-box-shadow: 0 2px 0 #dee0e2;
+    box-shadow: 0 2px 0 #dee0e2;
+  }
+  &:focus,
+  &:visited,
+  &:link {
+    color: #0b0c0c;
+  }
+}

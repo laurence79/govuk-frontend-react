@@ -11,7 +11,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["cypress"]
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["cypress", "@percy/cypress"]
   },
   "include": ["src/**/*"],
   "exclude": [
@@ -19,6 +22,6 @@
     "dist",
     "storybook-static",
     "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
+    "src/**/*.spec.tsx"
   ]
 }

@@ -8,5 +8,5 @@ export default {
 
 export const ${componentName}Story = () => <${componentName} foo="bar" />;
 `,
-  extension: `.stories.tsx`
+  filename: `${componentName}.stories.tsx`
 });

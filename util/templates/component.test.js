@@ -11,5 +11,5 @@ describe('${componentName} Component', () => {
   });
 });
 `,
-  extension: `.spec.tsx`
+  filename: `${componentName}.spec.tsx`
 });

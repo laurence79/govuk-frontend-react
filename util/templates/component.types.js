@@ -3,5 +3,5 @@ module.exports = componentName => ({
   foo: string;
 };
 `,
-  extension: `.types.ts`
+  filename: `${componentName}.types.ts`
 });
