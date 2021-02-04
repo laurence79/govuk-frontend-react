@@ -15,7 +15,7 @@
     "lint:watch": "./node_modules/.bin/esw --cache 'src/**/*.{js,ts,jsx,tsx}' --watch",
     "cypress:open": "TZ=UTC CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open",
     "cypress:run": "TZ=UTC CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress run --browser chrome --headless",
-    "cypress:ci": "percy exec -- TZ=UTC cypress run --browser chrome --headless",
+    "cypress:ci": "TZ=UTC percy exec -- cypress run --browser chrome --headless",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component",

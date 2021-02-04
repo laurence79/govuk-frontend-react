@@ -21,6 +21,8 @@ jobs:
 
       - name: Tests
         run: npm run cypress:ci
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Build
         run: npm run build
