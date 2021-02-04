@@ -3,6 +3,11 @@ module.exports = componentName => ({
 import { ${componentName}Props } from './${componentName}.types';
 import './${componentName}.scss';
 
+/**
+ * Renders a GOV.UK Design System ${componentName} component
+ * @link https://design-system.service.gov.uk/components/${componentName.toLowerCase()}/
+ * @param props - The properties to render the component with.
+ */
 export const ${componentName}: React.FC<${componentName}Props> = ({ foo }) => (
   <div data-testid="${componentName}" className="${componentName.toLowerCase()}">
     {foo}
