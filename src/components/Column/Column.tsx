@@ -24,8 +24,8 @@ const [Full, Half, Quarter, Third, ThreeQuarters, TwoThirds] = allSizes.map(
         <div
           data-testid={id}
           className={cx(
-            `govuk-grid-column-full-${size}`,
-            desktopSize && `govuk-grid-column-full-${desktopSize}-from-desktop`,
+            `govuk-grid-column-${size}`,
+            desktopSize && `govuk-grid-column-${desktopSize}-from-desktop`,
             className
           )}
           {...rest}
