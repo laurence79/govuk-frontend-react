@@ -3,6 +3,6 @@
   "video": false,
   "fixturesFolder": false,
   "experimentalComponentTesting": true,
-  "componentFolder": "src",
+  "componentFolder": "src/components",
   "nodeVersion": "system"
 }

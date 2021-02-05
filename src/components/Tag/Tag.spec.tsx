@@ -22,7 +22,7 @@ describe('Tag Component', () => {
     });
   });
 
-  describe('appearance', () => {
+  it('appears as expected', () => {
     const colours: TagColour[] = [
       'dark-blue',
       'grey',
@@ -35,16 +35,18 @@ describe('Tag Component', () => {
       'orange',
       'yellow'
     ];
-    colours.forEach(colour => {
-      it(`renders ${colour}`, () => {
-        mount(<Tag {...defaultProps} colour={colour} />);
-        cy.percySnapshot();
-      });
-    });
 
-    it('renders loading', () => {
-      mount(<Tag loading>Loading</Tag>);
-      cy.percySnapshot();
-    });
+    mount(
+      <>
+        {colours.map(colour => (
+          <>
+            <Tag colour={colour}>{colour}</Tag>
+            <br />
+          </>
+        ))}
+      </>
+    );
+
+    cy.percySnapshot();
   });
 });

@@ -12,8 +12,15 @@ describe('${componentName} Component', () => {
     });
   });
 
-  describe('appearance', () => {
-    mount(<${componentName} foo="bar" />);
+  it('appears as expected', () => {
+    /*
+     *  Render your component in a variety of different states
+     */
+    mount(
+      <>
+        <${componentName} foo="bar" />
+      </>
+    );
     cy.percySnapshot();
   });
 });

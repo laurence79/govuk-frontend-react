@@ -17,4 +17,4 @@ const content = (
 );
 
 export const On = () => <Glow on>{content}</Glow>;
-export const Off = () => <Glow on={false}>{content}</Glow>;
+export const Off = () => <Glow>{content}</Glow>;

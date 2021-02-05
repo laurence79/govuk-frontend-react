@@ -9,9 +9,11 @@ if (!componentName) {
   process.exit(1);
 }
 
-console.log('Creating Component Templates with name: ' + componentName);
+console.log(`Creating Component Templates with name: ${componentName}`);
 
-const componentDirectory = `./src/${componentName}`;
+const componentsDirectory = './src/components';
+const componentDirectory = `${componentsDirectory}/${componentName}`;
+const indexFile = `${componentsDirectory}/index.ts`;
 
 if (fs.existsSync(componentDirectory)) {
   console.error(`Component ${componentName} already exists.`.red);
@@ -29,6 +31,22 @@ generatedTemplates.forEach(template => {
   );
 });
 
+const currentIndexContent = fs.existsSync(indexFile)
+  ? fs.readFileSync(indexFile, 'utf8')
+  : '';
+
+const newIndexContent =
+  // reads better with concatenation
+  // eslint-disable-next-line prefer-template
+  currentIndexContent
+    .split('\n')
+    .filter(l => l !== '')
+    .concat(`export * from './${componentName}';`)
+    .sort()
+    .join('\n') + '\n';
+
+fs.writeFileSync(indexFile, newIndexContent);
+
 console.log(
-  'Successfully created component under: ' + componentDirectory.green
+  `Successfully created component under: ${componentDirectory.green}`
 );

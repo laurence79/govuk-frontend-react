@@ -24,6 +24,15 @@
  * Each story throughout the library will be wrapped in a div with a margin of 3
  */
 
+import React from 'react';
+export const decorators = [
+  Story => (
+    <div className="js-enabled">
+      <Story />
+    </div>
+  )
+];
+
 /**
  * Parameters
  *

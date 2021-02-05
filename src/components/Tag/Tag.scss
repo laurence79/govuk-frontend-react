@@ -1,15 +1,2 @@
 @import '~govuk-frontend/govuk/components/tag/tag';
 @import '~govuk-frontend/govuk/settings/colours-applied';
-
-.green-tag {
-  background-color: govuk-colour('green') !important;
-}
-.red-tag {
-  background-color: $govuk-error-colour !important;
-}
-.grey-tag {
-  background-color: govuk-colour('mid-grey') !important;
-}
-.orange-tag {
-  background-color: govuk-colour('orange') !important;
-}

@@ -8,7 +8,7 @@ import './Glow.scss';
  * @param props - The properties to render the component with.
  */
 export const Glow: React.FC<GlowProps> = ({
-  on = true,
+  on = false,
   className,
   ...rest
 }) => (

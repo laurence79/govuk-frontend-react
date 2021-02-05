@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { mount } from '@cypress/react';
+import { mountWithJsEnabled } from '../../test-helpers';
 import { Button } from './Button';
 
 describe('Button Component', () => {
   describe('rendering', () => {
     it('renders children', () => {
-      mount(<Button>Continue</Button>);
+      mountWithJsEnabled(<Button>Continue</Button>);
 
       cy.get('[data-testid="Button"]').should('exist');
       cy.contains('Continue');
@@ -15,7 +15,7 @@ describe('Button Component', () => {
   describe('behaviour', () => {
     it('handles clicks', () => {
       const onClick = cy.stub();
-      mount(<Button onClick={onClick}>Confirm and send</Button>);
+      mountWithJsEnabled(<Button onClick={onClick}>Confirm and send</Button>);
 
       cy.get('[data-testid="Button"]')
         .click()
@@ -26,12 +26,12 @@ describe('Button Component', () => {
 
     // These tests upset Cypress
     // @cypress/react is still in Alpha so this is probably temporary
-    // Error: [@cypress/react] 🔥 Hmm, cannot find root element to mount the component. Did you forget to include the support file?
+    // Error: [@cypress/react] 🔥 Hmm, cannot find root element to mountWithJsEnabled the component. Did you forget to include the support file?
     //
     // describe('default double-click behaviour', () => {
     //   it('handles double-clicks as 2 clicks', () => {
     //     const onSubmit = cy.stub();
-    //     mount(
+    //     mountWithJsEnabled(
     //       <form onSubmit={onSubmit}>
     //         <Button type="submit">Confirm and send</Button>
     //       </form>
@@ -48,7 +48,7 @@ describe('Button Component', () => {
     // describe('double-click prevented', () => {
     //   it('handles double-clicks as 1 click', () => {
     //     const onSubmit = cy.stub();
-    //     mount(
+    //     mountWithJsEnabled(
     //       <form onSubmit={onSubmit}>
     //         <Button type="submit" preventDoubleClick>
     //           Confirm and send
@@ -66,7 +66,7 @@ describe('Button Component', () => {
 
     it('ignores clicks when disabled', () => {
       const onClick = cy.stub();
-      mount(
+      mountWithJsEnabled(
         <Button disabled onClick={onClick}>
           Disabled
         </Button>
@@ -80,40 +80,16 @@ describe('Button Component', () => {
     });
   });
 
-  describe('appearance', () => {
-    it('default', () => {
-      mount(<Button>Continue</Button>);
-      cy.percySnapshot();
-    });
-
-    it('start now', () => {
-      mount(<Button start>Start now</Button>);
-      cy.percySnapshot();
-    });
-
-    it('secondary', () => {
-      mount(<Button secondary>Find address</Button>);
-      cy.percySnapshot();
-    });
-
-    it('two buttons', () => {
-      mount(
-        <>
-          <Button className="govuk-!-margin-right-1">Save and continue</Button>
-          <Button secondary>Save as draft</Button>
-        </>
-      );
-      cy.percySnapshot();
-    });
-
-    it('warning', () => {
-      mount(<Button warning>Delete account</Button>);
-      cy.percySnapshot();
-    });
-
-    it('disabled', () => {
-      mount(<Button disabled>Disabled button</Button>);
-      cy.percySnapshot();
-    });
+  it('appears as expected', () => {
+    mountWithJsEnabled(
+      <>
+        <Button>Default</Button>
+        <Button start>Start now</Button>
+        <Button secondary>Secondary</Button>
+        <Button warning>Warning</Button>
+        <Button disabled>Disabled</Button>
+      </>
+    );
+    cy.percySnapshot();
   });
 });
