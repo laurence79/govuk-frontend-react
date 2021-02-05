@@ -22,15 +22,14 @@ describe('Glow Component', () => {
     });
   });
 
-  describe('appearance', () => {
-    it('on', () => {
-      mount(<Glow>{content}</Glow>);
-      cy.percySnapshot();
-    });
+  it('appears as expected', () => {
+    mount(
+      <>
+        <Glow>{content}</Glow>
+        <Glow on>{content}</Glow>
+      </>
+    );
 
-    it('off', () => {
-      mount(<Glow on={false}>{content}</Glow>);
-      cy.percySnapshot();
-    });
+    cy.percySnapshot();
   });
 });

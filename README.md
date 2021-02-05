@@ -26,8 +26,13 @@ Make sure you import the styles somewhere global
 
 Then import components like so
 
-```ts
+```tsx
+import React from 'react';
 import { Tag } from 'govuk-frontend-react-ts';
+
+export const MyStuff: React.FC<{}> => (
+  <Tag colour="red" />
+);
 ```
 
 ## Development
@@ -62,12 +67,14 @@ This will generate:
 
 ```
 /src
-  /YourComponentName
-    YourComponentName.tsx
-    YourComponentName.stories.tsx
-    YourComponentName.test.tsx
-    YourComponentName.types.ts
-    YourComponentName.scss
+  /components
+    /YourComponentName
+      YourComponentName.tsx
+      YourComponentName.stories.tsx
+      YourComponentName.test.tsx
+      YourComponentName.types.ts
+      YourComponentName.scss
+      index.ts
 ```
 
 The default templates for each file can be modified under `util/templates`.
