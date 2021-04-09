@@ -9,10 +9,10 @@ import './WidthContainer.scss';
  * @link https://design-system.service.gov.uk/styles/layout#limiting-width-of-content
  * @param {WidthContainerProps} props - The properties to render the component with.
  */
-export const WidthContainer: React.FC<WidthContainerProps> = ({
+export const WidthContainer = ({
   className,
   ...rest
-}) => (
+}: WidthContainerProps): JSX.Element => (
   <div
     data-testid="WidthContainer"
     className={cx('govuk-width-container', className)}

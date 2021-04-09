@@ -1,7 +1,9 @@
 {
   "autoBarrel.ignoreFilePathContainingAnyOf": ".spec,.test,.stories",
+  "editor.codeActionsOnSave": { "source.fixAll": true },
   "editor.formatOnSave": true,
   "editor.rulers": [80],
+  "editor.renderWhitespace": "boundary",
   "eslint.lintTask.enable": true,
   "eslint.validate": ["typescript"],
   "files.exclude": {
@@ -9,7 +11,7 @@
   },
   "search.exclude": {
     "**/node_modules": true,
-    "**/lib": true
+    "**/dist": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "javascript.preferences.importModuleSpecifier": "relative",
@@ -19,6 +21,7 @@
   "taskExplorer.pathToMake": "make",
   "cSpell.words": [
     "behaviour",
-    "govuk"
+    "govuk",
+    "ttypescript"
   ]
 }

@@ -1,9 +1,9 @@
 import React, { SVGProps } from 'react';
 
-export const StartIcon: React.FC<SVGProps<SVGSVGElement>> = ({
+export const StartIcon = ({
   children,
   ...rest
-}) => (
+}: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
     className="govuk-button__start-icon"
     xmlns="http://www.w3.org/2000/svg"

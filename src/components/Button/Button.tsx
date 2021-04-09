@@ -9,10 +9,11 @@ import { compact } from '../../helpers';
 
 /**
  * Renders a GOV.UK Design System Button component
+ * @function Button
  * @link https://design-system.service.gov.uk/components/button/
- * @param props - The properties to render the component with
+ * @param {ButtonProps} props - The properties to render the component with
  */
-export const Button: React.FC<ButtonProps> = props => {
+export const Button = (props: ButtonProps): JSX.Element => {
   const {
     children,
     type,

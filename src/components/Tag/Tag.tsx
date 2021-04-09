@@ -8,8 +8,9 @@ import { compact } from '../../helpers';
 
 /**
  * Renders a GOV.UK Design System Tag component
+ * @function Tag
  * @link https://design-system.service.gov.uk/components/tag/
- * @param props - The properties to render the component with.
+ * @param {TagProps} props - The properties to render the component with.
  */
 export const Tag: React.FC<TagProps> = ({
   loading,

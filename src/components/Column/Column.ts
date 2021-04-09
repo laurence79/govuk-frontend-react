@@ -1,41 +1,5 @@
-import React from 'react';
-import cx from 'classnames';
-import { ColumnProps, ColumnSize } from './Column.types';
 import './Column.scss';
-
-const allSizes: [ColumnSize, string][] = [
-  ['full', 'Full'],
-  ['half', 'Half'],
-  ['one-quarter', 'Quarter'],
-  ['one-third', 'Third'],
-  ['three-quarters', 'ThreeQuarters'],
-  ['two-thirds', 'TwoThirds']
-];
-
-const [Full, Half, Quarter, Third, ThreeQuarters, TwoThirds] = allSizes.map(
-  ([size, name]) => {
-    const id = `Column.${name}`;
-    const Component: React.FC<ColumnProps> = ({
-      className,
-      desktopSize,
-      ...rest
-    }) => {
-      return (
-        <div
-          data-testid={id}
-          className={cx(
-            `govuk-grid-column-${size}`,
-            desktopSize && `govuk-grid-column-${desktopSize}-from-desktop`,
-            className
-          )}
-          {...rest}
-        />
-      );
-    };
-    Component.displayName = id;
-    return Component;
-  }
-);
+import { makeColumnComponent } from './makeColumnComponent';
 
 /**
  * Renders a GOV.UK Design System Column components
@@ -59,7 +23,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  Full,
+  Full: makeColumnComponent('full', 'Full'),
 
   /**
    * Renders a GOV.UK Design System Half Column component
@@ -79,7 +43,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  Half,
+  Half: makeColumnComponent('half', 'Half'),
 
   /**
    * Renders a GOV.UK Design System One Quarter Column component
@@ -99,7 +63,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  Quarter,
+  Quarter: makeColumnComponent('one-quarter', 'Quarter'),
 
   /**
    * Renders a GOV.UK Design System One Third Column component
@@ -119,7 +83,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  Third,
+  Third: makeColumnComponent('one-third', 'Third'),
 
   /**
    * Renders a GOV.UK Design System Three Quarters Column component
@@ -139,7 +103,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  ThreeQuarters,
+  ThreeQuarters: makeColumnComponent('three-quarters', 'ThreeQuarters'),
 
   /**
    * Renders a GOV.UK Design System Two Thirds Column component
@@ -159,5 +123,5 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  TwoThirds
+  TwoThirds: makeColumnComponent('two-thirds', 'TwoThirds')
 };

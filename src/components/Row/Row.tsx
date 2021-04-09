@@ -9,7 +9,7 @@ import './Row.scss';
  * @link https://design-system.service.gov.uk/styles/layout#understanding-the-grid-system
  * @param {RowProps} props - The properties to render the component with.
  */
-export const Row: React.FC<RowProps> = ({ className, ...rest }) => (
+export const Row = ({ className, ...rest }: RowProps): JSX.Element => (
   <div
     data-testid="Row"
     className={cx('govuk-grid-row', className)}
