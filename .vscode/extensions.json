@@ -4,7 +4,7 @@
     "dbaeumer.vscode-eslint",
     "spmeesseman.vscode-taskexplorer",
     "mikehanson.auto-barrel",
-    "me-dutour-mathieu.vscode-github-actions",
+    "cschleiden.vscode-github-actions",
     "syler.sass-indented"
   ]
 }

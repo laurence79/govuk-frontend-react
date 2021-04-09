@@ -1,33 +1,38 @@
 import path from 'path';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
+import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json';
+import ttypescript from 'ttypescript';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import bundleScss from 'rollup-plugin-bundle-scss';
 
-const packageJson = require('./package.json');
+import pkg from './package.json';
 
 export default {
   input: 'src/index.ts',
+  external: [
+    ...Object.keys(pkg.dependencies ?? {}),
+    ...Object.keys(pkg.peerDependencies ?? {})
+  ],
   output: [
     {
-      file: packageJson.main,
+      file: pkg.main,
       format: 'cjs',
-      sourcemap: true
+      exports: 'named'
     },
     {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true
+      file: pkg.module,
+      format: 'es',
+      exports: 'named'
     }
   ],
   plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
+    json(),
+    nodeResolve({
+      preferBuiltins: true
+    }),
     typescript({
-      useTsconfigDeclarationDir: true,
-      tsconfig: 'tsconfig.release.json'
+      tsconfig: './tsconfig.rollup.json',
+      typescript: ttypescript
     }),
     bundleScss({
       bundlerOptions: {
