@@ -9,7 +9,7 @@ import './${componentName}.scss';
  * @link https://design-system.service.gov.uk/components/${componentName.toLowerCase()}/
  * @param {${componentName}Props} props - The properties to render the component with.
  */
-export const ${componentName}: React.FC<${componentName}Props> = ({ foo }) => (
+export const ${componentName} = ({ foo }: ${componentName}Props): JSX.Element => (
   <div data-testid="${componentName}" className="${componentName.toLowerCase()}">
     {foo}
   </div>
