@@ -29,12 +29,6 @@ jobs:
         run: |
           jq '.version = env.RELEASE_VERSION' package.json > package.$$.json && mv package.$$.json package.json
 
-      - name: Configure package registry
-        uses: actions/setup-node@v2
-        with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-
       - name: Publish
         run: npm publish --access public
         env:
