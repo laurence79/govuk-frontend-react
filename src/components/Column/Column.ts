@@ -43,7 +43,7 @@ export const Column = {
     </WidthContainer>
     ```
   */
-  Half: makeColumnComponent('half', 'Half'),
+  Half: makeColumnComponent('one-half', 'Half'),
 
   /**
    * Renders a GOV.UK Design System One Quarter Column component

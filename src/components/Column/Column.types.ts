@@ -6,7 +6,7 @@ import { HTMLAttributes } from 'react';
  */
 export type ColumnSize =
   | 'full'
-  | 'half'
+  | 'one-half'
   | 'one-third'
   | 'two-thirds'
   | 'one-quarter'
