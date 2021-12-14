@@ -12,6 +12,18 @@ describe('Button Component', () => {
     });
   });
 
+  it('Respects the type property', () => {
+    mountWithJsEnabled(
+      <>
+        <Button type="submit">Button 1</Button>
+        <Button type="button">Button 2</Button>
+      </>
+    );
+
+    cy.get('[type="submit"]').should('exist');
+    cy.get('[type="button"]').should('exist');
+  });
+
   describe('behaviour', () => {
     it('handles clicks', () => {
       const onClick = cy.stub();

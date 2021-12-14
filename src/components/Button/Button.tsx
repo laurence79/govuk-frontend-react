@@ -16,7 +16,6 @@ import { compact } from '../../helpers';
 export const Button = (props: ButtonProps): JSX.Element => {
   const {
     children,
-    type,
     disabled = false,
     className: classNameIn,
     preventDoubleClick,
@@ -93,6 +92,7 @@ export const Button = (props: ButtonProps): JSX.Element => {
   }
 
   if (rest.element === 'input') {
+    const { type } = props;
     return (
       <input
         {...rest}
